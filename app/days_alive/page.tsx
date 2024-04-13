@@ -66,20 +66,20 @@ export default function Home() {
   const percentageLived = ((daysAliveNumber / lifeExpectancyDays) * 100).toFixed(2);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 relative">
+    <main className="flex min-h-screen flex-col items-center justify-center md:p-24 p-4 relative">
       {birthday ? (
         <>
-          <p className="font-mono text-4xl mt-4">
+          <p className="font-mono md:text-4xl mt-4 text-md text-center">
             You have been alive for <span className="font-bold">{daysAlive.toLocaleString()}</span> days.
           </p>
           {expectedLifespan && parseInt(expectedLifespan, 10) > 0 && (
-            <p className="font-mono text-xl mt-2">
+            <p className="font-mono md:text-xl text-xs mt-2 text-center">
              If you are lucky, you have lived only <span className="font-bold">{percentageLived}%</span> of your life and you have <span className="font-bold">{daysLeft.toLocaleString()}</span> days left.
             </p>
           )}
         </>
       ) : (
-        <p className="font-mono text-xl mt-4 italic">
+        <p className="font-mono md:text-xl text-xs mt-4 italic text-center">
           Update your birthday in the bottom right corner to see how many days you have been alive.
         </p>
       )}
