@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="absolute bottom-0 text-center p-2">
           Powered by <Link className="underline" href="https://twitter.com/mrmagan_">@mrmagan_</Link>
         </div>
+        <Analytics/>
       </body>
     </html>
   );
